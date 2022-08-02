@@ -27,7 +27,7 @@ public class PrincipalState
                 default:
                     System.out.println("Esa opción no es válida!");
             }
-            gym.ejecutarAccion();
+            gym.executeAction();
         }   while (option!=0);
     }
     private static void menuOptions()

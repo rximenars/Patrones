@@ -7,9 +7,9 @@ public class Gym
         this.myState = st;
     }
 
-    public void ejecutarAccion()
+    public void executeAction()
     {
-        myState.ejecutarAccion();
+        myState.executeAction();
     }
 }
 

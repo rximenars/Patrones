@@ -17,7 +17,7 @@ public class GymProxyApplication
         System.out.println("Contraseña: ");
         password =newPassword.next();
 
-        GymExecuterDB userExecuter = new GymExecuterProxy("Admin","12Admin");
+        GymExecuterDB userExecuter = new GymExecuterProxy(user,password);
         userExecuter.executeGymDB("Subir imagen");
     }
 }

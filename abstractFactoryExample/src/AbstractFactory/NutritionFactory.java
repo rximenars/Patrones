@@ -3,7 +3,7 @@ package AbstractFactory;
 public class NutritionFactory implements ServiceGymFactory
 {
     @Override
-    public ServiceGym crearServicio()
+    public ServiceGym createService()
     {
         return new ServiceNutritionPlan();
     }

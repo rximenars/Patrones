@@ -13,17 +13,17 @@ public class Principal
                 int service;
                 do
                 {
-                    service = preguntarServicio();
+                    service = askService();
                     switch (service)
                     {
                         case 1:
-                            usarServicio(new RoutinesFactory());
+                            useService(new RoutinesFactory());
                             break;
                         case 2:
-                            usarServicio(new TrainingFactory());
+                            useService(new TrainingFactory());
                             break;
                         case 3:
-                            usarServicio(new NutritionFactory());
+                            useService(new NutritionFactory());
                             break;
                         case 0:
                             System.out.println("Cancelando solicitud...");
@@ -33,15 +33,15 @@ public class Principal
                     System.out.println("\n");
                 }   while (service!=0);
             }
-            public static void usarServicio (ServiceGymFactory factory)
+            public static void useService (ServiceGymFactory factory)
             {
-                ServiceGym servicio = factory.crearServicio();
-                servicio.encargadoTrabajo();
-                servicio.tiempoEstimado();
-                servicio.pagoRecibido();
+                ServiceGym serviceCreate = factory.createService();
+                serviceCreate.jobManager();
+                serviceCreate.estimatedTime();
+                serviceCreate.paymentReceived();
             }
 
-            public static int preguntarServicio()
+            public static int askService()
             {
                 System.out.println(
                         "Por favor seleccione una de las siguientes opciones: \n"

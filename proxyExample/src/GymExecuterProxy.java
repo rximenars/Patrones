@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class GymExecuterProxy implements  GymExecuterDB
 {
-    boolean esAdministrador;
+    boolean isAdministrator;
     GymExecuterCredential dbExecuter;
 
     public GymExecuterProxy(String name, String password)
     {
-        if (name == "Admin" && password =="12Admin.")
+        if (name.equals("Admin")  && password.equals("12Admin."))
         {
-            esAdministrador =true;
+            isAdministrator =true;
             dbExecuter = new GymExecuterCredential();
         }
     }
 
     @Override
-    public void executeGymDB(String modificacion) throws Exception
+    public void executeGymDB(String modification) throws Exception
     {
-        if (esAdministrador)
+        if (isAdministrator)
         {
-            dbExecuter.executeGymDB(modificacion);
+            dbExecuter.executeGymDB(modification);
         }else
         {
             throw new Exception("Si no eres administrador, no puedes hacer modificaciones en la página web!");

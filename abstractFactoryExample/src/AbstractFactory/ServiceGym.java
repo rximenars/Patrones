@@ -2,7 +2,7 @@ package AbstractFactory;
 
 public interface ServiceGym
 {
-    public void encargadoTrabajo();
-    public void tiempoEstimado();
-    public void pagoRecibido();
+    public void jobManager();
+    public void estimatedTime();
+    public void paymentReceived();
 }
